@@ -75,7 +75,7 @@ var dogLizard = tots.mix('dogLizard', [dog, lizard]);
 // Make a dogLizard
 var goanna = dogLizard('goanna'); -> looks like a goanna.
 
-goanna.is(dog) -> true // like a dog..
+tots.is(goanna, dog) -> true // like a dog..
 goanna.factory === dog -> false // .. but not.
 goanna.good -> true // is a good goanna, yes you are!
 goanna.scaley -> true // still scaley
@@ -104,6 +104,6 @@ larry.run() -> 'runs like a lizard at 10'
 goanna.run() -> 'runs like a lizard at 30'
 peruvianIncaOrchid.run() -> 'runs at 30'
 
-goanna.is(lizardDog) -> false // not a lizard dog
-peruvianIncaOrchid.is(dogLizard) -> false // not a dog lizard
+tots.is(goanna, lizardDog) -> false // not a lizard dog
+tots.is(peruvianIncaOrchid, dogLizard) -> false // not a dog lizard
 ```
