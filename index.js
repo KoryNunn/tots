@@ -11,8 +11,8 @@ function create(type, thinger, otherThingers){
                 return;
             }
 
-            thingo._types.push.apply(thingo._types, otherThinger.types);
-            otherThinger.factory.apply(thingo, args);
+            thingo._types.push(otherThinger.type);
+            otherThinger.apply(thingo, args);
         });
 
         thingo._types.push(type);
